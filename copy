@@ -1,0 +1,10 @@
+@find_null_check@
+expression E;
+@@
+E = kmalloc(...);
+
+@check@
+position p;
+find_null_check @p;
+@@
+if (!E) { ... }
